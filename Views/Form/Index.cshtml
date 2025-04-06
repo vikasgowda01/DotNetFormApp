@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Fill Form";
+}
+
+<h2>Fill Form</h2>
+
+<form asp-action="SubmitForm" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Name</label>
+        <input type="text" name="Name" required />
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="email" name="Email" required />
+    </div>
+    <div>
+        <label>Address</label>
+        <input type="text" name="Address" required />
+    </div>
+    <div>
+        <label>Image</label>
+        <input type="file" name="image" accept="image/*" />
+    </div>
+    <button type="submit">Submit</button>
+</form>

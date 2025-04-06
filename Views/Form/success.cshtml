@@ -1,0 +1,13 @@
+@model FormData
+
+@{
+    ViewData["Title"] = "Success";
+}
+
+<h2>Form Submitted Successfully</h2>
+
+<p>Name: @Model.Name</p>
+<p>Email: @Model.Email</p>
+<p>Address: @Model.Address</p>
+
+<a href="@Url.Action("GeneratePdf", "Form", new { id = Model.Id })" class="btn btn-primary">Download PDF</a>
